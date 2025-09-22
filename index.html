@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تقرير النشاط للمعلمين</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- مكتبة jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>نموذج تقرير النشاط</h2>
+    <form id="reportForm">
+      <label>اسم المعلم:</label>
+      <input type="text" id="teacher" required>
+
+      <label>اسم النشاط:</label>
+      <input type="text" id="activity" required>
+
+      <label>التاريخ:</label>
+      <input type="date" id="date" required>
+
+      <label>ملاحظات:</label>
+      <textarea id="notes"></textarea>
+
+      <button type="button" onclick="generatePDF()">تنزيل التقرير PDF</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
